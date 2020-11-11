@@ -12,4 +12,5 @@ app_server <- function( input, output, session ) {
   )
   
   callModule(mod_load_data_server, "load_data_ui_1", r)
+  callModule(mod_explore_data_server, "explore_data_ui_1", r)
 }

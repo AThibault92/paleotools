@@ -19,7 +19,8 @@ app_ui <- function(request) {
         mod_load_data_ui("load_data_ui_1")
       ),
       tabPanel(
-        "Explore"
+        "Explore",
+        mod_explore_data_ui("explore_data_ui_1")
       ),
       tabPanel(
         "Predict temperature"
