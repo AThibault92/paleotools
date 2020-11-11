@@ -9,8 +9,21 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here 
-    fluidPage(
-      h1("paleotools")
+    navbarPage(
+      "PaleoTools",
+      tabPanel(
+        "Home"
+      ),
+      tabPanel(
+        "Load data",
+        mod_load_data_ui("load_data_ui_1")
+      ),
+      tabPanel(
+        "Explore"
+      ),
+      tabPanel(
+        "Predict temperature"
+      )
     )
   )
 }

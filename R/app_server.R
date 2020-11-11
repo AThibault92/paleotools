@@ -6,5 +6,10 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
-
+  r <- reactiveValues(
+    raw_data = NA,
+    data = NA
+  )
+  
+  callModule(mod_load_data_server, "load_data_ui_1", r)
 }
