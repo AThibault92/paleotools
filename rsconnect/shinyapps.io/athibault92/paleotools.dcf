@@ -1,0 +1,12 @@
+name: paleotools
+title: paleotools
+username:
+account: athibault92
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3210846
+bundleId: 3848048
+url: https://anteagroup.shinyapps.io/paleotools/
+when: 1605112333.64495
+asMultiple: FALSE
+asStatic: FALSE
