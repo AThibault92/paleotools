@@ -7,6 +7,7 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
+#' @import tidymodels
 mod_predict_temperature_ui <- function(id){
   ns <- NS(id)
   tagList(
@@ -44,17 +45,17 @@ mod_predict_temperature_server <- function(input, output, session, r){
     )
     
     if ("Multiple linear regression" %in% input$model_list){
-      pred_lm <- predict(model_maat_lm_3ohfa, r$data)
+      pred_lm <- predict(paleotools::model_maat_lm_3ohfa, r$data)
       r$results$`linear regression` <- pred_lm$.pred
     }
     
     if ("k-nn" %in% input$model_list){
-      pred_knn <- predict(model_maat_knn_3ohfa, r$data)
+      pred_knn <- predict(paleotools::model_maat_knn_3ohfa, r$data)
       r$results$`k-nn` <- pred_knn$.pred
     }
     
     if ("random forest" %in% input$model_list){
-      pred_rf <- predict(model_maat_rf_3ohfa, r$data)
+      pred_rf <- predict(paleotools::model_maat_rf_3ohfa, r$data)
       r$results$`Randfom forest` <- pred_rf$.pred
     }
     

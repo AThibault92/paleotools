@@ -35,7 +35,7 @@ mod_load_data_server <- function(input, output, session, r){
   output$template <- downloadHandler(
     filename = "template.csv",
     content = function(file){
-      readr::write_csv(example_dataset, file)
+      readr::write_csv(paleotools::example_dataset, file)
     }
   )
   
