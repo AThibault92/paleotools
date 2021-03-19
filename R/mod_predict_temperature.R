@@ -39,7 +39,6 @@ mod_predict_temperature_server <- function(input, output, session, r){
   ns <- session$ns
  
   observeEvent(input$run,{
-    
     r$results <- tibble::tibble(
       Sample = r$data$Sample
     )
